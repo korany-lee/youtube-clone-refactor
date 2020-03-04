@@ -1,11 +1,18 @@
 import { SET_USERNAME, SET_DARK_MODE } from "../actions/index";
 
-const settingReducer = (state, action) => {
+const initialState = {
+  currentUser: { name: "Guest" },
+  darkMode: false
+};
+
+const settingReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USERNAME:
-    // TODO
+      // TODO
+      break;
     case SET_DARK_MODE:
-    // TODO
+      // TODO
+      break;
     default:
       return state;
   }

@@ -1,14 +1,13 @@
 {
   "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
-    "max-len": [1, 120, 2, {"ignoreComments": true}],
+    "max-len": [1, 120, 2, { "ignoreComments": true }],
     "prop-types": 0,
     "react/prop-types": 0,
     "no-undef": 0,
-    "no-console": 0
+    "no-console": 0,
+    "no-unused-vars": 0
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"]
 }

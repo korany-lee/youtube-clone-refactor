@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoListEntry = ({ video, handleVideoListEntryTitleClick }) => (
+const VideoListEntry = ({ video, onEntryClick }) => (
   <div className="video-list-entry">
     <div className="media-left media-middle">
       <img
@@ -10,10 +10,7 @@ const VideoListEntry = ({ video, handleVideoListEntryTitleClick }) => (
       />
     </div>
     <div className="media-body">
-      <div
-        className="video-list-entry-title"
-        onClick={() => handleVideoListEntryTitleClick(video)}
-      >
+      <div className="video-list-entry-title" onClick={onEntryClick}>
         {video.snippet.title}
       </div>
       <div className="video-list-entry-detail">{video.snippet.description}</div>

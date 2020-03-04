@@ -1,6 +1,6 @@
 import { SET_CURRENT_VIDEO } from "../actions/index";
 
-const videoReducer = (state, action) => {
+const videoReducer = (state = {}, action) => {
   switch (action.type) {
     case SET_CURRENT_VIDEO:
       return Object.assign({}, state, {
