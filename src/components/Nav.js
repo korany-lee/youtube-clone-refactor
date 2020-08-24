@@ -1,18 +1,10 @@
 import React from "react";
-import Search from "./Search";
+import Search from "../containers/Search";
 
-const Nav = ({
-  handleSearchInputChange,
-  handleSettingButtonClick,
-  user,
-  darkMode
-}) => (
+const Nav = ({ handleSettingButtonClick, user, darkMode }) => (
   <nav className={darkMode ? "navbar dark" : "navbar"}>
     <div className="col-md-6 col-md-offset-3">
-      <Search
-        handleSearchInputChange={handleSearchInputChange}
-        darkMode={darkMode}
-      />
+      <Search darkMode={darkMode} />
     </div>
 
     <span>{user ? user.name : ""}님이 로그인했습니다.</span>
