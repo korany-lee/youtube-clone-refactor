@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { thunkedSearch } from "../actions";
 
 class Search extends React.Component {
   constructor(props) {
@@ -10,14 +12,13 @@ class Search extends React.Component {
   }
 
   handleInputChange(e) {
-    // this.props.handleSearchInputChange(e.target.value);
     this.setState({
       value: e.target.value
     });
   }
 
   handleSearch() {
-    this.props.handleSearchInputChange(this.state.value);
+    this.props.dispatch(/* TODO: 여기에서 액션을 실행합니다 */);
   }
 
   render() {
@@ -40,4 +41,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default connect()(Search);

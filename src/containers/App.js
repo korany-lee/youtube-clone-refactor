@@ -4,36 +4,19 @@ import { connect } from "react-redux";
 import VideoPlayer from "../components/VideoPlayer";
 import VideoList from "./VideoList";
 import Setting from "./Setting";
-import { searchYouTube } from "../searchYouTube";
-import { YOUTUBE_API_KEY } from "../../config/youtube";
-import { setCurrentVideo } from "../actions";
+import { thunkedSearch } from "../actions";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      videos: [],
       isSettingOpen: false
     };
   }
 
   componentDidMount() {
-    this.getYouTubeVideos("코드스테이츠");
-  }
-
-  getYouTubeVideos(query) {
-    var options = {
-      key: YOUTUBE_API_KEY,
-      query: query
-    };
-
-    searchYouTube(options, videos => {
-      this.setState({
-        videos: videos
-      });
-      this.props.dispatch(setCurrentVideo(videos[0]));
-    });
+    this.props.dispatch(/* TODO: 여기에서 액션을 실행합니다 */);
   }
 
   handleSettingButtonClick() {
@@ -46,7 +29,6 @@ class App extends React.Component {
     return (
       <div className={this.props.darkMode ? "main dark" : "main light"}>
         <Nav
-          handleSearchInputChange={this.getYouTubeVideos.bind(this)}
           handleSettingButtonClick={this.handleSettingButtonClick.bind(this)}
         />
         <div className="col-md-7">
@@ -56,7 +38,7 @@ class App extends React.Component {
           />
         </div>
         <div className="col-md-7">
-          <VideoList videos={this.state.videos} />
+          <VideoList videos={this.props.videos} />
         </div>
         <Setting
           isOpen={this.state.isSettingOpen}
@@ -69,6 +51,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
+    isLoading: state.searchReducer.isLoading,
+    videos: state.searchReducer.videos,
     currentVideo: state.videoReducer.currentVideo,
     darkMode: state.settingReducer.darkMode
   };
