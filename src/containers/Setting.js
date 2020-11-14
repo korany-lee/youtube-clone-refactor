@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { setUsername, setDarkMode } from "../actions";
 
 class Setting extends React.Component {
   constructor(props) {
@@ -16,13 +18,11 @@ class Setting extends React.Component {
   }
 
   handleSave() {
-    this.props.handleUpdateSetting("currentUser", {
-      name: this.state.username
-    });
+    this.props.dispatch(/* TODO: 여기에서 액션을 실행합니다 */);
   }
 
   handleToggleDarkMode(event) {
-    this.props.handleUpdateSetting("darkMode", event.target.checked);
+    this.props.dispatch(/* TODO: 여기에서 액션을 실행합니다 */);
   }
 
   render() {
@@ -63,4 +63,8 @@ class Setting extends React.Component {
   }
 }
 
-export default Setting;
+const mapStateToProps = state => ({
+  user: state.settingReducer.currentUser
+});
+
+export default connect(mapStateToProps)(Setting);

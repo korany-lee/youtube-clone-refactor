@@ -1,4 +1,2 @@
-import './VideoListEntry.test';
-import './VideoList.test';
-import './VideoPlayer.test';
-import './App.test';
+import "./VideoListEntry.test";
+import "./VideoPlayer.test";
