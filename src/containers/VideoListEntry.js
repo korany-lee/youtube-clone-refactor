@@ -5,11 +5,11 @@ import VideoListEntry from "../components/VideoListEntry";
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onEntryClick: () => {
-      return dispatch(setCurrentVideo(ownProps.video));
-    }
-  };
+	return {
+		onEntryClick: () => {
+			return dispatch(setCurrentVideo(ownProps.video));
+		},
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(VideoListEntry);
