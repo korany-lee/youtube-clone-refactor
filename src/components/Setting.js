@@ -8,7 +8,7 @@ const Setting = ({
 	user,
 	darkMode,
 }) => {
-	//useRef를 사용하지 않으면 어떤 에러가 발생하나:
+	//useRef 사용해도 되고 안해도 됨
 	const nameRef = useRef();
 
 	const [username, setUsername] = useState({
