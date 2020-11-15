@@ -37,10 +37,12 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "he": "^1.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "unescape": "^1.0.1"
   }
 }

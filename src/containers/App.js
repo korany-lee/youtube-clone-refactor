@@ -31,7 +31,7 @@ class App extends React.Component {
 				<Nav
 					handleSettingButtonClick={this.handleSettingButtonClick.bind(this)}
 				/>
-				<div className="col-md-7">
+				<div>
 					<VideoPlayer
 						video={
 							this.props.currentVideo
@@ -41,7 +41,7 @@ class App extends React.Component {
 						darkMode={this.props.darkMode}
 					/>
 				</div>
-				<div className="col-md-7">
+				<div>
 					<VideoList videos={this.props.videos} />
 				</div>
 				<Setting
