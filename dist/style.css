@@ -1,127 +1,133 @@
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
 .main {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #f1f1f1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #f1f1f1;
 }
 
 .main.dark {
-  background: #333333;
+	background: #333333;
 }
 
 .navbar {
-  background: #fff;
-  margin-bottom: 20px;
+	background: #fff;
+	margin-bottom: 20px;
 }
 
 .navbar.dark {
-  background: #666;
-  color: white;
+	background: #666;
+	color: white;
 }
 
 .navbar img {
-  height: 40px;
-  width: 50px;
+	height: 40px;
+	width: 50px;
 }
 
 .search-bar {
-  border-radius: 1px;
+	border-radius: 1px;
 }
 
 .search-bar .form-control {
-  border-radius: 2px;
+	border-radius: 2px;
 }
 
 .video-player-details {
-  background: #fff;
-  padding: 8px;
-  border: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+	background: #fff;
+	padding: 8px;
+	border: 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	margin-top: 10px;
 }
 
 .video-player-details.dark {
-  background: #333;
-  color: white;
+	background: #333;
+	color: white;
 }
 
 .video-list {
-  background: #fff;
-  padding: 8px;
-  border: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  overflow-x: auto;
+	background: #fff;
+	padding: 8px;
+	border: 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	overflow-x: auto;
 }
 
 .video-list.dark {
-  background: #666;
-  color: white;
+	background: #666;
+	color: white;
 }
 
 .video-list-entry {
-  font-size: 16px;
-  padding: 8px;
+	font-size: 16px;
+	padding: 8px;
 }
 
 .video-list-entry-title {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .video-list-entry-title:hover {
-  color: #e62117;
-  cursor: pointer;
+	color: #e62117;
+	cursor: pointer;
 }
 
 .video-list-entry-detail {
-  font-size: 12px;
-  color: #999;
+	font-size: 12px;
+	color: #999;
 }
 
 .mdl {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-x: hidden;
-  visibility: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow-x: hidden;
+	visibility: hidden;
+	transition: all 0.3s;
 }
 
 .mdl.show {
-  visibility: visible;
+	visibility: visible;
 }
 
 .mdl-mask {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .mdl .sidebar {
-  position: absolute;
-  background-color: #fff;
-  border-left: 1px solid #ccc;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 350px;
-  transform: translateX(350px);
-  padding: 20px;
-  transition: transform 0.3s;
+	position: absolute;
+	background-color: #fff;
+	border-left: 1px solid #ccc;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 350px;
+	transform: translateX(350px);
+	padding: 20px;
+	transition: transform 0.3s;
 }
 
 .mdl.show .sidebar {
-  transform: translateX(0);
+	transform: translateX(0);
+}
+
+.mdl .sidebar.dark {
+	background: #666;
+	color: white;
 }
 
 .small-margin-right {
-  margin-right: 5px;
+	margin-right: 5px;
 }
