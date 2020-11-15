@@ -15,7 +15,7 @@ class App extends React.Component {
 			currentVideo: null,
 			isSettingOpen: false,
 			currentUser: {
-				name: "korany",
+				name: "고라니",
 			},
 			darkMode: false,
 		};
